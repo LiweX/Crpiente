@@ -5,23 +5,23 @@
 
 struct termios saved_attributes;
 
-void detectInput(){
+void detectInput(char* direction){
     while(-1){
         if(getchar()==27){
             getchar();
             switch (getchar())
             {
             case 65:
-                printf("UP PRESS\n");
+                *direction='u';
                 break;
             case 66:
-                printf("DOWN PRESS\n");
+                *direction='d';
                 break;
             case 67:
-                printf("RIGHT PRESS\n");
+                *direction='r';
                 break;
             case 68:
-                printf("LEFT PRESS\n");
+                *direction='l';
                 break;
             default:
                 break;

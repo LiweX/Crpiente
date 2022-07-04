@@ -5,23 +5,23 @@
 
 struct termios saved_attributes;
 
-void detectInput(char* direction){
+void inputHandler(int*head_direction){
     while(-1){
         if(getchar()==27){
             getchar();
             switch (getchar())
             {
             case 65:
-                *direction='u';
+                *head_direction=1;
                 break;
             case 66:
-                *direction='d';
+                *head_direction=2;
                 break;
             case 67:
-                *direction='r';
+                *head_direction=4;
                 break;
             case 68:
-                *direction='l';
+                *head_direction=3;
                 break;
             default:
                 break;

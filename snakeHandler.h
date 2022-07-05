@@ -30,4 +30,4 @@ void snakeHandler(Serpiente* snake,int *direction);
 void drawSnake(int*map,Serpiente* snake);
 void snakeInit(Serpiente* lista);
 void addNode(Serpiente* lista,int x,int y);
-void checkApple(int *apple,Serpiente *snake,int*map);
+int checkApple(int *apple,Serpiente*snake);
